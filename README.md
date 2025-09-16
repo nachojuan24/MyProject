@@ -62,7 +62,7 @@ Last but not least, <code>macOS-spec-file.txt</code> and <code>Win-spec-file.txt
 
 ## How to Install and Run
 
-### Conda Enviroment
+### Conda Environment
 
 #### Windows:
 
