@@ -18,12 +18,8 @@ from werkzeug.utils import secure_filename
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
-# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
 
 model =load_model('app/model.h5')
-# print('Model loaded. Check http://127.0.0.1:5000/')
-
 labels = {0: 'Healthy', 1: 'Powdery', 2: 'Rust'}
 
 def getResult(image_path):
