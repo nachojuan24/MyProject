@@ -1,5 +1,7 @@
 import os
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+#Uncomment this part in Windows
+#os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
 import tensorflow as tf
 import numpy as np
 from tensorflow.keras.preprocessing import image
@@ -19,7 +21,7 @@ app = Flask(__name__)
 # app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-model =load_model('model.h5')
+model =load_model('app/model.h5')
 # print('Model loaded. Check http://127.0.0.1:5000/')
 
 labels = {0: 'Healthy', 1: 'Powdery', 2: 'Rust'}
@@ -60,4 +62,7 @@ def upload():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port)
