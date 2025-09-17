@@ -57,7 +57,7 @@ To run the API with Flask, choose one of the following options:
   <code>requirements.txt</code>, <code>Dockerfile</code>, and <code>.dockerignore</code>.
 </p>
 <p>
-Last but not least, <code>macOS-spec-file.txt</code> and <code>Win-spec-file.txt</code> can be used to create a compatible <b>Conda</b> environment.
+Last but not least, <code>myenv-macOS.yml</code> and <code>myenv.yml</code> can be used to create a compatible <b>Conda</b> environment.
 </p>
 
 ## How to Install and Run
@@ -67,15 +67,15 @@ Last but not least, <code>macOS-spec-file.txt</code> and <code>Win-spec-file.txt
 #### Windows:
 
 <p>
-To run the Flask application, you can use <code>Win-spec-file.txt</code> to create the appropriate environment on Windows:<br>
-<code>conda create --name myenv --file Win-spec-file.txt</code>
+To run the Flask application, you can use <code>myenv.yml</code> to create the appropriate environment on Windows:<br>
+<code>conda env create -f myenv.yml</code>
 </p>
 
 #### Mac:
 
 <p>
-Similarly, you can use <code>macOS-spec-file.txt</code> to create a suitable environment on macOS:<br>
-<code>conda create --name myenv --file macOS-spec-file.txt</code>
+Similarly, you can use <code>myenv-macOS.yml</code> to create a suitable environment on macOS:<br>
+<code>conda env create -f myenv-macOS.yml</code>
 </p>
 
 ### Docker
