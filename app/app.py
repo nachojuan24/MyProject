@@ -1,12 +1,12 @@
 import os
-#Uncomment this part in Windows
+#Uncomment this part on Windows
 #os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 import tensorflow as tf
 import numpy as np
 from tensorflow.keras.preprocessing import image
 from PIL import Image 
-# import cv2  #fails
+# import cv2 
 from keras.models import load_model
 from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
@@ -15,7 +15,7 @@ from flask import Flask, flash, request, redirect, url_for
 from werkzeug.utils import secure_filename
 
 # UPLOAD_FOLDER = '/path/to/the/uploads'
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+# ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
 
